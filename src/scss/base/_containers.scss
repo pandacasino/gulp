@@ -1,0 +1,26 @@
+.container {
+    padding: 0 var(--container-padding);
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.container-right {
+    /* overflou-x: hidden; */
+    padding-left: calc(-100% - var(--container-width)) / 2 + var(--container-padding);
+
+    @media (max-width: var(--laptop-size)) {
+        padding-left: var(--container-padding);
+    }
+}
+
+.container-left {
+    /* overflow: hidden; */
+    padding-right: calc(
+        (100% - var(--container-width)) / 2 + var(--container-padding)
+    );
+
+    
+    @media (max-width: var(--laptop-size)) {
+        padding-right: var(--container-padding);
+    }
+}
